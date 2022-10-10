@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>🌤CrazyWeather🏝</title>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg">
+          <div class="card-group">
+            <div class="card first">
+              <div class="card-body">
+                <div class="row">
+                 <div class="col d-md-flex justify-content-md-end">
+                  <button
+                  type="button"
+                  class="btn btn-link celsium"
+                  data-bs-toggle="button"
+                  aria-pressed="true"
+                  id="celsius-button"
+                  >
+                   ℃
+                  </button>
+                  <span class="button-divider">|</span>
+                  <button
+                  type="button"
+                  class="btn btn-link farenheit"
+                  data-bs-toggle="button"
+                  id="farenheit-button"
+                  >
+                   ℉
+                  </button>
+                 </div>
+                </div>
+              <div>
+                <div class="row">
+                  <div class="col-3">
+                    <span 
+                    class="city-main"
+                    id="city-mainId">City,</span>
+                    <br />
+                    <span class="country-main">Country</span>
+                    <br />
+                    <br />
+                    <span class="current-weekDay-Time">Current WeekDay & Time</span>
+                  </div>
+                  <div class="col-4 temperature-main" id="temperature">23℃</div>
+                  <div class="col-4 measurements">
+                    <span id = "pressure">Pressure:</span>
+                    <br />
+                    <span id = "humidity">Humidity:</span> 
+                    <br />
+                    <span id = "wind:">Wind:</span>  
+                    <br />
+                    <span id = "sky:">Partly cloudy</span> 
+                    <br />
+                    <span id = "precipitation">Precipitation:</span> 
+                  </div>
+                </div>
+                <form id="search-form">
+              <div class="row search">
+                <div class="col-10">
+                 <input
+                  type="text"
+                  class="form-control search"
+                  placeholder="Enter your Place on Earth :)"
+                  id="search-city-input"
+                  autocomplete="off"
+                  autofocus="on" 
+                   />
+                </div>
+               <div class="col-1 text-center"> 
+                <input 
+                type="submit" 
+                class="btn btn-primary"
+                value="Search"
+                />
+                </div>
+                </div>
+                </form>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group second">
+          <div class="card bg-transparent second">
+            <img src="images/sunny.svg" class="card-img" alt="sun2d.svg" />
+            <div class="card-img-overlay">
+              <h5 class="card-title mini">17℃</h5>
+            </div>
+            <div
+              class="card-footer bg-transparent border-transparent footer-weekday"
+            >
+              Mon
+            </div>
+          </div>
+          <div class="card bg-transparent second">
+            <img src="images/snowy.svg" class="card-img" alt="sun2d.svg" />
+            <div class="card-img-overlay">
+              <h5 class="card-title mini">59℃</h5>
+            </div>
+            <div
+              class="card-footer bg-transparent border-transparent footer-weekday"
+            >
+              Tue
+            </div>
+          </div>
+          <div class="card bg-transparent second">
+            <img src="images/thunder2.svg" class="card-img" alt="sun2d.svg" />
+            <div class="card-img-overlay">
+              <h5 class="card-title mini">69℃</h5>
+            </div>
+            <div
+              class="card-footer bg-transparent border-transparent footer-weekday"
+            >
+              Wed
+            </div>
+          </div>
+          <div class="card bg-transparent second">
+            <img src="images/cloudy.svg" class="card-img" alt="sun2d.svg" />
+            <div class="card-img-overlay">
+              <h5 class="card-title mini">100℃</h5>
+            </div>
+            <div
+              class="card-footer bg-transparent border-transparent footer-weekday"
+            >
+              Thu
+            </div>
+          </div>
+          <div class="card bg-transparent second">
+            <img src="images/partycloudy.svg" class="card-img" alt="sun2d.svg" />
+            <div class="card-img-overlay">
+              <h5 class="card-title mini">17℃</h5>
+            </div>
+            <div
+              class="card-footer bg-transparent border-transparent footer-weekday"
+            >
+              Fri
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
