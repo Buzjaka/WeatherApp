@@ -50,7 +50,7 @@ function search(event) {
   let cityElement = document.querySelector("#city-mainId");
   let cityInput = document.querySelector("#search-city-input");
   cityElement.innerHTML = cityInput.value;
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey = "f7fc6473a48af82781316d83f88cea69";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let units = "metric";
   let apiUrl = `${apiEndpoint}?q=${cityInput.value}&appid=${apiKey}&units=${units}`;
